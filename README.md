@@ -1,2 +1,4 @@
 # dotfiles
-nvim config
+Mostly my neovim plugins
+
+I also use oh-my-zsh
