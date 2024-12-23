@@ -29,6 +29,7 @@ return {
     set('n', '<C-j>', smart_splits.move_cursor_down)
     set('n', '<C-k>', smart_splits.move_cursor_up)
     set('n', '<C-l>', smart_splits.move_cursor_right)
+    set('n', '<C-\\>', smart_splits.move_cursor_previous)
 
     -- swapping buffers between windows
     set('n', '<leader><leader>h', smart_splits.swap_buf_left)
