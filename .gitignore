@@ -18,6 +18,7 @@ projects
 .config/gh
 .config/lazygit
 .gitconfig
+.git-credentials
 .landscape
 .motd_shown
 .nvm/
