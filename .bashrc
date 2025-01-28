@@ -101,3 +101,4 @@ fi
 #    . /etc/bash_completion
 #fi
 . "/home/stevebobs/.deno/env"
+. "$HOME/.cargo/env"

@@ -10,7 +10,7 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.wildignore:append({"*/node_modules/*"})
+vim.opt.wildignore:append({ "*/node_modules/*" })
 
 -- Remapping exiting insert mode its muscle memory at this point
 keymap.set("i", "jj", "<ESC>", opts)
@@ -34,7 +34,7 @@ keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
 -- Paste something without losing buffer
-keymap.set("x", "<leader>p", "\"_dP")
+keymap.set("x", "<leader>p", '"_dP')
 
 -- Tabs
 keymap.set("n", "te", ":tabedit ")
@@ -50,8 +50,7 @@ keymap.set("n", "sv", ":vsplit<Return>", opts)
 keymap.set("n", "<leader>dab", ":w|%bd|e#<Return>", opts)
 
 -- Duplicate a line and comment out the first line
-keymap.set("n","yc","yygccp", {remap = true})
-
+keymap.set("n", "yc", "yygccp", { remap = true })
 
 -- I keep wanting to delete a buffer with this, so I'm setting it now
 keymap.set("n", "<leader>bd", ":bd<Return>", opts)

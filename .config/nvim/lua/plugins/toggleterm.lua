@@ -1,9 +1,9 @@
 return {
-  'akinsho/toggleterm.nvim',
+  "akinsho/toggleterm.nvim",
   version = "*",
   opts = {},
   config = function()
-    require('toggleterm').setup {
+    require("toggleterm").setup({
       size = 20,
       open_mapping = [[<C-\>]], -- Ctrl+\ to toggle terminal
       hide_numbers = true,
@@ -11,7 +11,7 @@ return {
       shade_terminals = true,
       start_in_insert = true,
       persist_size = true,
-      direction = 'float', -- 'vertical' | 'horizontal' | 'tab' | 'float'
-    }
+      direction = "float", -- 'vertical' | 'horizontal' | 'tab' | 'float'
+    })
   end,
 }
