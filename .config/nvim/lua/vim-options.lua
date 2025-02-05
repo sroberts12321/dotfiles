@@ -53,4 +53,6 @@ keymap.set("n", "<leader>dab", ":w|%bd|e#<Return>", opts)
 keymap.set("n", "yc", "yygccp", { remap = true })
 
 -- I keep wanting to delete a buffer with this, so I'm setting it now
-keymap.set("n", "<leader>bd", ":bd<Return>", opts)
+keymap.set("n", "<leader>bn", ":bn<Return>", { desc = "Next Buffer" })
+keymap.set("n", "<leader>bp", ":bp<Return>", { desc = "Previous Buffer" })
+keymap.set("n", "<leader>bd", ":bd<Return>", { desc = "Delete Buffer" })

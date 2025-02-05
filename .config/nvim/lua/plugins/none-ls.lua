@@ -13,6 +13,6 @@ return {
         require("none-ls.diagnostics.eslint_d"),
       },
     })
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Auto Format" })
   end,
 }
