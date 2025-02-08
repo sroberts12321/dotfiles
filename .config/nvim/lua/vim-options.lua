@@ -36,7 +36,7 @@ keymap.set("n", "N", "Nzzzv")
 -- Paste something without losing buffer
 keymap.set("x", "<leader>p", '"_dP')
 
--- Tabs
+-- Tab management
 keymap.set("n", "te", ":tabedit ")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
@@ -47,12 +47,14 @@ keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- Delete all buffers, keep current open
-keymap.set("n", "<leader>dab", ":w|%bd|e#<Return>", opts)
+keymap.set("n", "<leader>dab", ":w|%bd|e#<Return>", { noremap = true, silent = true, desc = "[d]elete [a]ll [b]uffers" })
 
 -- Duplicate a line and comment out the first line
 keymap.set("n", "yc", "yygccp", { remap = true })
 
 -- I keep wanting to delete a buffer with this, so I'm setting it now
 keymap.set("n", "<leader>bn", ":bn<Return>", { desc = "Next Buffer" })
+
+-- Simple buffer navigation
 keymap.set("n", "<leader>bp", ":bp<Return>", { desc = "Previous Buffer" })
 keymap.set("n", "<leader>bd", ":bd<Return>", { desc = "Delete Buffer" })
