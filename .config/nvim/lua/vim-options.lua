@@ -47,7 +47,12 @@ keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- Delete all buffers, keep current open
-keymap.set("n", "<leader>dab", ":w|%bd|e#<Return>", { noremap = true, silent = true, desc = "[d]elete [a]ll [b]uffers" })
+keymap.set(
+	"n",
+	"<leader>dab",
+	":w|%bd|e#<Return>",
+	{ noremap = true, silent = true, desc = "[d]elete [a]ll [b]uffers" }
+)
 
 -- Duplicate a line and comment out the first line
 keymap.set("n", "yc", "yygccp", { remap = true })
