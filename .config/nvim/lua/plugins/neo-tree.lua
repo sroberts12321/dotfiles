@@ -17,6 +17,7 @@ return {
 		},
 	},
 	keys = {
+		-- Changed neotree command to a toggle
 		{ "<C-n>", ":Neotree toggle=true<CR>" },
 	},
 }

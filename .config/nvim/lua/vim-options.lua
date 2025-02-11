@@ -51,7 +51,7 @@ keymap.set(
 	"n",
 	"<leader>dab",
 	":w|%bd|e#<Return>",
-	{ noremap = true, silent = true, desc = "[d]elete [a]ll [b]uffers" }
+	{ noremap = true, silent = true, desc = "[D]elete [A]ll [B]uffers" }
 )
 
 -- Duplicate a line and comment out the first line

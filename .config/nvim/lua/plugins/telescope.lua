@@ -5,6 +5,8 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			local builtin = require("telescope.builtin")
+
+			-- Set open file mapping to match Obsidian
 			vim.keymap.set("n", "<C-o>", builtin.find_files, { desc = "Open File" })
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Find Grep" })
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffer" })

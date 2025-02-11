@@ -1,5 +1,6 @@
 return {
 	{
+		-- Config mostly taken from josean-dev on github :]
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		event = { "BufReadPre", "BufNewFile" },
@@ -103,19 +104,19 @@ return {
 
 					-- Next diagnostic
 					opts.desc = "Go to next diagnostic"
-					keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+					keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
 					-- Hover under cursor
 					opts.desc = "Show documentation for what is under cursor"
-					keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+					keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
 					-- Restart LSP
 					opts.desc = "Restart LSP"
-					keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+					keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
 				end,
 			})
 
-			-- used to enable autocompletion (assign to every lsp server config)
+			-- Used to enable autocompletion (assign to every lsp server config)
 			local capabilities = cmp_nvim_lsp.default_capabilities()
 
 			-- Change the Diagnostic symbols in the sign column (gutter)
@@ -126,14 +127,14 @@ return {
 			end
 
 			mason_lspconfig.setup_handlers({
-				-- default handler for installed servers
+				-- Default handler for installed servers
 				function(server_name)
 					lspconfig[server_name].setup({
 						capabilities = capabilities,
 					})
 				end,
 				["svelte"] = function()
-					-- configure svelte server
+					-- Configure svelte server
 					lspconfig["svelte"].setup({
 						capabilities = capabilities,
 						on_attach = function(client, bufnr)
@@ -148,14 +149,14 @@ return {
 					})
 				end,
 				["graphql"] = function()
-					-- configure graphql language server
+					-- Configure graphql language server
 					lspconfig["graphql"].setup({
 						capabilities = capabilities,
 						filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 					})
 				end,
 				["emmet_ls"] = function()
-					-- configure emmet language server
+					-- Configure emmet language server
 					lspconfig["emmet_ls"].setup({
 						capabilities = capabilities,
 						filetypes = {
@@ -171,12 +172,12 @@ return {
 					})
 				end,
 				["lua_ls"] = function()
-					-- configure lua server (with special settings)
+					-- Configure lua server
 					lspconfig["lua_ls"].setup({
 						capabilities = capabilities,
 						settings = {
 							Lua = {
-								-- make the language server recognize "vim" global
+								-- Here to recognize "vim" global
 								diagnostics = {
 									globals = { "vim" },
 								},
