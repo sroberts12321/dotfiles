@@ -7,7 +7,7 @@ return {
 		{
 			"L3MON4D3/LuaSnip",
 			-- follow latest release.
-			version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+			version = "v2.3.0", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 			-- install jsregexp (optional!).
 			build = "make install_jsregexp",
 		},
@@ -43,7 +43,7 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
-				["<CR>"] = cmp.mapping.confirm({ select = false }),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
@@ -56,11 +56,18 @@ return {
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({
-					maxwidth = 50,
+					mode = "symbol",
+					maxwidth = {
+						menu = function()
+							return math.floor(0.45 * vim.o.columns)
+						end,
+						abbr = 50,
+					},
 					ellipsis_char = "...",
+					show_labelDetails = true,
 				}),
-				fields = {},
 				expandable_indicator = true,
+				fields = { cmp.ItemField.Abbr, cmp.ItemField.Kind, cmp.ItemField.Menu },
 			},
 		})
 	end,
