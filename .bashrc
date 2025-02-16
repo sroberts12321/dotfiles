@@ -102,3 +102,4 @@ fi
 #fi
 . "/home/stevebobs/.deno/env"
 . "$HOME/.cargo/env"
+LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
