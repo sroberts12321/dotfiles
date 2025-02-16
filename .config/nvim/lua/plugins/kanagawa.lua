@@ -4,11 +4,11 @@ return {
 	priority = 1000,
 	config = function()
 		vim.cmd([[
-    augroup user_colors
-      autocmd!
-      autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
-    augroup END
-  ]])
+		  augroup user_colors
+		    autocmd!
+		    autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+		  augroup END
+		]])
 
 		require("kanagawa").setup({
 			commentStyle = {
