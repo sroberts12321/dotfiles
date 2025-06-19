@@ -2,7 +2,13 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
+# Remove Windows Node from PATH
+PATH=$(echo "$PATH" | sed 's|:/mnt/c/Users/srobe_000/AppData/Roaming/npm||g')
+
+# Ensure Linux paths take precedence
+export PATH="/usr/local/bin:/usr/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -81,14 +87,13 @@ plugins=(
   vscode
   web-search
   z
-  zsh-autosuggestions
+  # zsh-autosuggestions
+  # zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
-ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -116,13 +121,6 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cl='clear'

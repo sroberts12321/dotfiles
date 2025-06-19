@@ -30,3 +30,8 @@ projects
 .rustup
 .lesshst 
 .zshenv
+.ssh/
+".oh-my-zsh\r/"
+.yarnrc
+.zshrc.pre-oh-my-zsh
+

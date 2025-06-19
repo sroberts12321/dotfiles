@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+vim.env.PATH = vim.env.PATH .. ":/mnt/c/Users/srobe_000/AppData/Roaming/npm/node"
 
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
