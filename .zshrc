@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Remove Windows Node from PATH
 PATH=$(echo "$PATH" | sed 's|:/mnt/c/Users/srobe_000/AppData/Roaming/npm||g')
@@ -126,3 +126,4 @@ alias ...='cd ../..'
 alias cl='clear'
 alias ll='ls -FGlAhp'
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
+export PATH="/home/stevebobs/.local/bin:$PATH"

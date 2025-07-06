@@ -1,6 +1,7 @@
 .config/nvim/.luarc.json
 .config/gh
 .config/lazygit
+.config/qmk
 .shell.pre-oh-my-zsh
 .deno
 projects
@@ -34,4 +35,4 @@ projects
 ".oh-my-zsh\r/"
 .yarnrc
 .zshrc.pre-oh-my-zsh
-
+qmk_firmware
