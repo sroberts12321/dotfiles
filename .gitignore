@@ -30,6 +30,7 @@ projects
 .cargo
 .rustup
 .lesshst 
+.wget-hsts
 .zshenv
 .ssh/
 ".oh-my-zsh\r/"

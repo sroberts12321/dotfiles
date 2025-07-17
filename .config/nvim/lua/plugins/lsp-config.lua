@@ -129,7 +129,7 @@ return {
 				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 			end
 
-			require("lspconfig").lua_ls.setup({
+			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 				settings = {
 					Lua = {
@@ -143,8 +143,8 @@ return {
 					},
 				},
 			})
-			require("lspconfig").ts_ls.setup({})
-			require("lspconfig").emmet_ls.setup({
+			lspconfig.ts_ls.setup({})
+			lspconfig.emmet_ls.setup({
 				capabilities = capabilities,
 				filetypes = {
 					"html",
@@ -157,7 +157,7 @@ return {
 					"svelte",
 				},
 			})
-			require("lspconfig").svelte.setup({
+			lspconfig.svelte.setup({
 				capabilities = capabilities,
 				on_attach = function(client)
 					vim.api.nvim_create_autocmd("BufWritePost", {
@@ -169,7 +169,7 @@ return {
 					})
 				end,
 			})
-			require("lspconfig").graphql.setup({
+			lspconfig.graphql.setup({
 				capabilities = capabilities,
 				filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 			})
